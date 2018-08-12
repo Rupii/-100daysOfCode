@@ -7,7 +7,7 @@ int maxSubArray(int arr[], int n)
     int sum = 0, best = 0;
     for (int i = 0; i < n; i++)
     {
-        sum = max(arr[i], sum + arr[i]);
+        sum = (arr[i] > sum + arr[i]) ? arr[i] : sum + arr[i];
         best = max(best, sum);
     }
     return best;
