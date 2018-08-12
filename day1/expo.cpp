@@ -13,7 +13,7 @@ int main()
         (y | (1 << i)) ? cout << "1" : cout << "0";
 
     int a = 3, b = 2;
-    int c = a / b;
+    int c = a /  b;
     cout << endl
          << c;
     return 0;
