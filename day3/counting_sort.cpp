@@ -11,16 +11,28 @@ void countSort(int arr[], int n, int B[], int K)
     {
         C[arr[i]] = C[arr[i]] + 1;
     }
-    // for (int i = 0; i < K; i++)
-    // cout << C[i];
-    for (int j = 0, i = 0; i < K; i++)
-    {
 
-        if (C[i] && j < n)
-        {
-            B[j] = i;
-            j++;
-        }
+    // for (int j = 0, i = 0; i < K; i++)
+    // {
+
+    //     if (C[i] && j < n)
+    //     {
+    //         B[j] = i;
+    //         j++;
+    //     }
+    // }
+
+    for (int i = 1; i < K; i++)
+    {
+        C[i] += C[i - 1];
+    }
+    for (int i = 0; i < K; i++)
+        cout << C[i] << " ";
+    cout << endl;
+    for (int j = n - 1; j >= 0; j--)
+    {
+        B[C[arr[j]]] = arr[j];
+        C[arr[j]] = C[arr[j]] - 1;
     }
 }
 int main()
