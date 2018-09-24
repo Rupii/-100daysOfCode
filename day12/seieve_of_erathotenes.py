@@ -15,4 +15,4 @@ def SeieveOfErathothenes(n):
 
 if __name__ == "__main__":
     # n = input("enter the number")
-    SeieveOfErathothenes(100)
+    SeieveOfErathothenes(5)
